@@ -5,7 +5,7 @@ const Accueil = () => {
     return (
         <div className='bannier img_bannier'>
             <Bannier
-                img="./IMG.jpg"
+                img="./assets/IMG.jpg"
                 title="Chez vous, partout et ailleurs"
             />
         </div>

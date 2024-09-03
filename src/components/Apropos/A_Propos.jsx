@@ -5,7 +5,7 @@ const A_Propos = () => {
     return (
         <div className='bannier bannier2'>
             <Bannier
-                img=".src/assets/IMG2.jpg"
+                img="./assets/IMG2.jpg"
                 title=""
             />
         </div>
