@@ -12,25 +12,10 @@ header {
   margin: 45px 100px 50px 100px;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  /* margin: 15px; */
-  justify-content: end;
-
-}
-
-.liste {
-  display: flex;
-  list-style-type: none;
+.nav_link a {
+  text-decoration: none;
+  color: black;
   font-size: 24px;
-
-}
-
-header li {
-  text-transform: none;
-  /* padding-inline: 40px; */
 }
 
 .aPropos {
@@ -51,10 +36,20 @@ h1 {
   width: auto;
   height: 223px;
   margin: 0 100px 40px 100px;
-  background: rgba(0, 0, 0, 0.6) url('./assets/IMG.jpg');
+  border-radius: 25px;
+}
+
+.img_bannier {
+  background: rgba(0, 0, 0, 0.6)url('./assets/IMG.jpg');
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 25px;
+  background-blend-mode: darken;
+}
+
+
+.bannier2 {
+  background: rgba(0, 0, 0, 0.3) url('./assets/IMG2.jpg');
+  background-position: center;
+  background-size: cover;
   background-blend-mode: darken;
 }
