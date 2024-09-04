@@ -2,6 +2,7 @@ import React from 'react';
 import Bannier from './Bannier';
 import Card from '../Card';
 // import BannierImage from './assets/IMG.jpg';
+// import BannierImage from './Logo/IMG.jpg';
 
 const Accueil = () => {
     return (
