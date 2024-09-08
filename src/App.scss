@@ -1,5 +1,8 @@
 $color_1: black;
 $color_2: white;
+$color_3: #FF6060;
+$color_4: #FFF;
+$color_5: #F6F6F6;
 $font-family_1: "Montserrat";
 
 * {
@@ -57,7 +60,7 @@ h1 {
 	width: auto;
 	height: auto;
 	border-radius: 25px;
-	background: #F6F6F6;
+	background: $color_5;
 	margin: 0 100px 50px 100px;
 	.card_contenu {
 		display: flex;
@@ -72,7 +75,7 @@ h1 {
 	display: inline-block;
 	width: 340px;
 	height: 340px;
-	background-color: #FF6060;
+	background-color: $color_3;
 	border-radius: 10px;
 	align-content: end;
 	}
@@ -80,7 +83,7 @@ h1 {
 		color: $color_2;
 		margin: 0;
 		padding: 20px;
-		color: #FFF;
+		color: $color_4;
 		font-size: 18px;
 		font-weight: 700;
 		line-height: 142.6%; /* 25.668px */
@@ -108,3 +111,64 @@ footer {
 		font-size: 24px;
 	}
 }
+.collapse-container {
+	margin: 0 208px;
+  	.collapsible-wrapper {
+		margin-bottom: 10px;
+  	}
+	.collapse-container {
+		width: 100%;
+		max-width: auto;
+		margin: 0 auto;
+	}
+	.collapsible-wrapper {
+		border-radius: 5px;
+	}
+	.collapsible-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $color_3;
+		padding: 10px 20px 10px 15px;
+		font-size: 24px;
+		border-radius: 5px;
+		outline: none;
+	}
+	.arrow-button {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		color: $color_2;
+	}
+	.arrow-icon {
+		font-size: 32px;
+		transition: transform 0.3s;
+	}
+	.content {
+		padding: 15px;
+		border-radius: 5px;
+		background-color: $color_5;
+		
+	}
+	.section_title{
+		font-weight: 700;
+		color: $color_2;
+	}
+	p{
+		font-size: 18px;
+	}
+}
+.collapse-aPropos {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin-bottom: 38px;
+}
+  
+  
+
+  
+  
+
+  
