@@ -1,6 +1,4 @@
 import React from 'react';
-// import img from './Logo/IMG.jpg';
-// import BannierImage from './Logo/IMG.jpg';
 
 const Bannier = ({img,title}) => {
     return (
