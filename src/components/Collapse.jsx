@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-const Collapse = ({title,p}) => {
+const Collapse = ({title, p}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -11,7 +11,6 @@ const Collapse = ({title,p}) => {
 
   return (
     <div className="collapse-container">
-
       <div className="collapsible-wrapper">
         <div className="collapsible-header">
           <h3 className='section_title'>{title}</h3>
@@ -20,7 +19,7 @@ const Collapse = ({title,p}) => {
           </button>
         </div>
         <div className="content" style={{ display: isOpen ? 'block' : 'none' }}>
-          <p>{p}</p>
+          {typeof p === 'string' ? <p>{p}</p> : p}
         </div>
       </div>
     </div>
@@ -28,5 +27,3 @@ const Collapse = ({title,p}) => {
 };
 
 export default Collapse;
-
-
