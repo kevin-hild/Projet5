@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faStar as faStarEmpty } from '@fortawesome/free-solid-svg-icons'; // Utilise la même icône pour les étoiles vides
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Collapse from '../Collapse';
 
 const LocationDetail = () => {
     const { id } = useParams(); // Récupère l'ID depuis l'URL
     const [location, setLocation] = useState(null);
+    const [loading, setLoading] = useState(true); // Nouveau state pour gérer le chargement
 
     useEffect(() => {
         fetch('/logements.json') // Charge les données depuis le fichier JSON
@@ -14,12 +15,20 @@ const LocationDetail = () => {
             .then((data) => {
                 const foundLocation = data.find((item) => item.id === id);
                 setLocation(foundLocation);
+                setLoading(false); // Terminer le chargement une fois les données récupérées
             })
-            .catch((error) => console.error('Erreur:', error));
+            .catch((error) => {
+                console.error('Erreur:', error);
+                setLoading(false); // Terminer le chargement en cas d'erreur
+            });
     }, [id]);
 
+    if (loading) {
+        return <div>Chargement...</div>; // Afficher un message de chargement
+    }
+
     if (!location) {
-        return <div>Chargement...</div>;
+        return <Navigate to="/404" />; // Redirection vers la page d'erreur 404 si la location n'est pas trouvée
     }
 
     // Fonction pour générer des étoiles avec FontAwesome
@@ -42,7 +51,7 @@ const LocationDetail = () => {
     return (
         <div className='contenu-page'>
             <div className='img-carousel'>
-            <img src={location.cover} alt={location.title} />
+                <img src={location.cover} alt={location.title} />
             </div>
             <div className='info'>
                 <div className='title-info'>
@@ -58,10 +67,10 @@ const LocationDetail = () => {
                 </div>
                 <div className="host-info">
                     <div className='name-photo'>
-                    <p>
-                        {location.host.name.split(' ')[0]}<br />
-                        {location.host.name.split(' ')[1]}
-                    </p>
+                        <p>
+                            {location.host.name.split(' ')[0]}<br />
+                            {location.host.name.split(' ')[1]}
+                        </p>
                         <img src={location.host.picture} alt={location.host.name} className="host-picture" />
                     </div>
                     <div className="rating-stars">
@@ -81,9 +90,9 @@ const LocationDetail = () => {
                         title="Equipments"
                         p={(
                             <ul>
-                              {location.equipments.map((equipment, index) => (
-                                <li key={index}>{equipment}</li>
-                              ))}
+                                {location.equipments.map((equipment, index) => (
+                                    <li key={index}>{equipment}</li>
+                                ))}
                             </ul>
                         )}
                     />
