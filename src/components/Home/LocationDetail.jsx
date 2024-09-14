@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'; // Chevron icons
 import Collapse from '../Collapse';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const LocationDetail = () => {
     const { id } = useParams(); // Récupère l'ID depuis l'URL
@@ -48,11 +51,45 @@ const LocationDetail = () => {
         );
     };
 
+    // Flèche personnalisée "Précédent"
+    const PrevArrow = ({ onClick }) => (
+        <div className="slick-prev slick-arrow" onClick={onClick}>
+            <FontAwesomeIcon icon={faChevronLeft} />
+        </div>
+    );
+
+    // Flèche personnalisée "Suivant"
+    const NextArrow = ({ onClick }) => (
+        <div className="slick-next slick-arrow" onClick={onClick}>
+            <FontAwesomeIcon icon={faChevronRight} />
+        </div>
+    );
+
+    // Configuration du carrousel
+    const settings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+    };
+
     return (
         <div className='contenu-page'>
+            {/* Carrousel d'images */}
             <div className='img-carousel'>
-                <img src={location.cover} alt={location.title} />
+                <Slider {...settings}>
+                    {location.pictures.map((picture, index) => (
+                        <div key={index}>
+                            <img src={picture} alt={`${location.title} ${index}`} className="carousel-image" />
+                        </div>
+                    ))}
+                </Slider>
             </div>
+
             <div className='info'>
                 <div className='title-info'>
                     <h1 className='title2'>{location.title}</h1>

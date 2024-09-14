@@ -343,3 +343,48 @@ footer {
     text-decoration-line: underline;
   }
 }
+
+/* Styles pour le carrousel */
+.img-carousel {
+  position: relative;
+  max-width: 100%;
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+}
+/* Styles pour les flèches */
+.slick-arrow {
+  position: absolute;
+  top: 40%; /* Centrer verticalement */
+  color: white;
+  font-size: 119px;
+  cursor: pointer;
+  z-index: 10; /* Assurer que les flèches sont devant les images */
+  margin: 0 10px;
+}
+.slick-prev {
+  left: 20px; /* Positionner à 20px du bord gauche */
+}
+.slick-next {
+  right: 70px;
+}
+/* Empêcher les pointillés autour des flèches après un clic */
+.slick-arrow:focus {
+  outline: none;
+}
+/* Pas d'effet de survol pour les flèches */
+.slick-arrow:hover {
+  background: none;
+  color: white;
+}
+/* Désactiver les pseudo-éléments générés par slick pour les flèches */
+.slick-prev:before,
+.slick-next:before {
+  content: none; /* Empêche le contenu des pseudo-éléments de s'afficher */
+}
+
+// react load images async
