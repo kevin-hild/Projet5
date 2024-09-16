@@ -1,0 +1,118 @@
+// Media queries pour les résolutions de 375px et moins
+@media screen and (max-width: 375px) {
+    header {
+        flex-direction: row;
+        margin: 20px;
+        height: auto;
+      .logo {
+        width: 145px;
+      }
+      .nav_link {
+        flex-direction: row;
+        gap: 20px;
+      }
+      .nav_link a {
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  
+    .bannier {
+      margin: 0 20px 22px; // Réduire les marges latérales sur mobile
+      height: 110px; // Ajuster la hauteur de la bannière
+      justify-content: start;
+    }
+    .titre_h1 {
+      font-size: 24px; /* Réduire la taille du texte */
+      line-height: 1.2; /* Ajuster l'espacement entre les lignes */
+    }
+    .section_card {
+      margin: 0 20px; // Réduire les marges latérales
+      background: none;
+      display: block;
+      .card_contenu {
+        gap: 20px; // Réduire l'espace entre les cartes
+        margin: 20px; // Réduire les marges internes
+      }
+      .card {
+        width: 335px;
+        height: 255px;
+        flex-shrink: 0;
+      }
+      .title_card {
+        font-size: 16px; // Réduire la taille de la police du titre
+      }
+    }
+  
+    h1 {
+      font-size: 36px; // Réduire la taille du titre
+    }
+  
+    .collapse-container {
+      margin: 0 20px; // Réduire la marge pour les collapsibles
+    }
+  
+    footer {
+      flex-direction: column; // Réorganiser les éléments du footer en colonne
+      height: auto; // Ajuster la hauteur du footer
+      .logo_copyright {
+        margin: 20px 0; // Ajuster les marges
+      }
+      .copyright {
+        font-size: 12px; // Réduire la taille de la police du texte copyright
+      }
+    }
+  
+    // Pour les images carrousel ou autre contenu
+    .img-carousel img {
+      height: 250px; // Ajuster la hauteur des images carrousel
+    }
+  
+
+    footer .logo_footer {
+        margin-bottom: 15px;
+    }
+
+    .collapse-aPropos {
+        gap: 20px;
+    }
+
+    .page-erreur {
+        h1 {
+            width: 198px;
+            height: 99px;
+            font-size: 96px;
+            margin: 113px 0;
+        }
+         p {
+            font-size: 18px;
+            margin-bottom: 113px;
+            text-align: center;
+        }
+        .lien-retour {
+            margin-bottom: 113px;
+            font-size: 14px;
+        }
+    }
+    
+    .contenu-page {
+        margin: 27px 20px;
+        .img-carousel img {
+            height: 335px;
+        }
+        .slick-arrow {
+            font-size: 24px; /* Ajuster la taille des flèches pour les écrans petits */
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+          }
+        
+          .slick-prev {
+            left: 10px; /* Ajuster la position du côté gauche pour les petits écrans */
+          }
+        
+          .slick-next {
+            right: 5px; /* Ajuster la position du côté droit pour les petits écrans */
+          }
+    }
+}

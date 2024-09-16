@@ -40,17 +40,17 @@ header {
   align-items: center;
   height: 68px;
   margin: 45px $spacing 50px $spacing;
-
+  .nav_link a {
+    text-decoration: none;
+    color: $color-1;
+    font-size: 24px;
+  }
+  .nav_link a.active {
+  text-decoration: underline;
+  }
   .nav_link {
-    a {
-      text-decoration: none;
-      color: $color-1;
-      font-size: 24px;
-    }
-
-    .aPropos {
-      margin-left: 60px;
-    }
+    display: flex;
+    gap: 57px;
   }
 }
 // Title
@@ -69,6 +69,7 @@ h1 {
   height: 223px;
   margin: 0 $spacing 45px $spacing;
   border-radius: $border-radius;
+  overflow: hidden;
 
   &.img_bannier {
     background: rgba(0, 0, 0, 0.6) url('./assets/IMG.jpg') center/cover no-repeat;
@@ -387,4 +388,7 @@ footer {
   content: none; /* Empêche le contenu des pseudo-éléments de s'afficher */
 }
 
-// react load images async
+
+
+
+// overflow: hidden;
