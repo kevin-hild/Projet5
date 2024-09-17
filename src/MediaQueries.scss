@@ -16,7 +16,6 @@
         font-weight: 500;
       }
     }
-  
     .bannier {
       margin: 0 20px 22px; // Réduire les marges latérales sur mobile
       height: 110px; // Ajuster la hauteur de la bannière
@@ -43,15 +42,12 @@
         font-size: 16px; // Réduire la taille de la police du titre
       }
     }
-  
     h1 {
       font-size: 36px; // Réduire la taille du titre
     }
-  
     .collapse-container {
       margin: 0 20px; // Réduire la marge pour les collapsibles
     }
-  
     footer {
       flex-direction: column; // Réorganiser les éléments du footer en colonne
       height: auto; // Ajuster la hauteur du footer
@@ -62,21 +58,16 @@
         font-size: 12px; // Réduire la taille de la police du texte copyright
       }
     }
-  
     // Pour les images carrousel ou autre contenu
     .img-carousel img {
       height: 250px; // Ajuster la hauteur des images carrousel
     }
-  
-
     footer .logo_footer {
         margin-bottom: 15px;
     }
-
     .collapse-aPropos {
         gap: 20px;
     }
-
     .page-erreur {
         h1 {
             width: 198px;
@@ -94,16 +85,15 @@
             font-size: 14px;
         }
     }
-    
     .contenu-page {
         margin: 27px 20px;
         .img-carousel img {
-            height: 335px;
+            height: 255px;
         }
         .slick-arrow {
             font-size: 24px; /* Ajuster la taille des flèches pour les écrans petits */
-            top: 50%;
-            transform: translateY(-50%);
+            top: 45%;
+            z-index: 100;
             margin: 0;
           }
         
@@ -114,5 +104,77 @@
           .slick-next {
             right: 5px; /* Ajuster la position du côté droit pour les petits écrans */
           }
+    }
+    .info {
+      flex-direction: column;
+    }
+    .contenu-page  {
+      .title-info .title2 {
+        font-size: 18px;
+      }
+      .title-info p {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .tags-container {
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+      }
+      .tags-container .tag {
+        // width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        height: 18px;
+        flex-shrink: 0;
+        font-size: 10px;
+        padding: 2px 22px;
+      }
+      .tag {
+        display: flex;
+        flex-direction: row;
+      }
+      .host-info {
+        display: flex;
+        flex-direction: row-reverse;
+        
+      }
+      .rating-stars {
+        margin-right: auto;
+      }
+      .host-info .name-photo {
+        justify-content: end;
+        margin: 0;
+      }
+      .host-info p {
+        font-size: 12px;
+      }
+      .host-info img {
+        height: 32px;
+        width: 32px;
+      }
+      .img-carousel img {
+        margin-bottom: 5px;
+      }
+    }
+    .description-equipement {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .collapse-container .collapsible-header {
+      padding: 10px;
+    }
+    .collapse-container .section_title {
+      font-size: 13px;
+    }
+    .collapse-container p {
+      font-size: 12px;
+    }
+    .collapse-container .arrow-icon {
+      font-size: 18px;
+    }
+    .collapse-equipements .content ul {
+      font-size: 12px;
     }
 }

@@ -75,6 +75,7 @@ const LocationDetail = () => {
         autoplaySpeed: 3000,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        fade: false,
     };
 
     return (

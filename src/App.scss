@@ -196,9 +196,11 @@ footer {
   .section_title {
     font-weight: 700;
     color: $color-2;
+    font-size: 24px;
   }
   p {
     font-size: 18px;
+    font-weight: 400;
   }
 }
 // Collapse aPropos
@@ -232,8 +234,9 @@ footer {
     .title2 {
       color: $color-3;
       font-size: 36px;
-      padding: 4px 0;
+      margin-bottom: 5px;
       justify-content: start;
+      font-weight: 500;
     }
     p {
       font-size: 18px;
@@ -249,7 +252,7 @@ footer {
       background-color: $color-3;
       color: $color-2;
       padding: 5px 40px;
-      border-radius: 15px;
+      border-radius: 10px;
       font-size: 14px;
       font-weight: 700;
     }
@@ -349,18 +352,22 @@ footer {
 .img-carousel {
   position: relative;
   max-width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: border-radius 0.3s ease-in-out;
   .carousel-image {
     width: 100%;
     height: auto;
     max-height: 500px;
     object-fit: cover;
     margin-bottom: 30px;
+    border-radius: 15px;
   }
 }
 /* Styles pour les flèches */
 .slick-arrow {
   position: absolute;
-  top: 40%; /* Centrer verticalement */
+  top: 35%; /* Centrer verticalement */
   color: white;
   font-size: 119px;
   cursor: pointer;
@@ -369,9 +376,15 @@ footer {
 }
 .slick-prev {
   left: 20px; /* Positionner à 20px du bord gauche */
+  margin: 0;
 }
 .slick-next {
   right: 70px;
+  margin: 0;
+}
+.slick-prev, .slick-next {
+  height: 0;
+  // width: 0;
 }
 /* Empêcher les pointillés autour des flèches après un clic */
 .slick-arrow:focus {
@@ -386,9 +399,10 @@ footer {
 .slick-prev:before,
 .slick-next:before {
   content: none; /* Empêche le contenu des pseudo-éléments de s'afficher */
+  margin: 0;
+  padding: 0;
+  height: 0;
+  width: 0;
 }
-
-
-
 
 // overflow: hidden;
