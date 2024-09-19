@@ -167,6 +167,7 @@ footer {
 // Collapse Container
 .collapse-container {
   margin: 0 208px;
+
   .collapsible-wrapper {
     margin-bottom: 10px;
   }
@@ -189,7 +190,15 @@ footer {
   }
   .arrow-icon {
     font-size: 32px;
-    transition: transform $transition-duration;
+    transition: transform $transition-duration; // Transition pour la rotation
+    &.open {
+      transform: rotate(180deg); // Rotation de 180° quand le collapse est ouvert
+    }
+  }
+  .collapsible-content {
+    overflow: hidden;
+    transition: height $transition-duration ease; // Transition pour la hauteur
+    height: 0; // Par défaut, la hauteur est 0 pour l'animation
   }
   .content {
     padding: 15px;
@@ -414,10 +423,4 @@ footer {
 .slick-prev:before,
 .slick-next:before {
   content: none; /* Empêche le contenu des pseudo-éléments de s'afficher */
-  // margin: 0;
-  // padding: 0;
-  // height: 0;
-  // width: 0;
 }
-
-// overflow: hidden;

@@ -18,4 +18,3 @@ const Bannier = ({ img, title }) => {
 };
 
 export default Bannier;
-// h2 titre 
