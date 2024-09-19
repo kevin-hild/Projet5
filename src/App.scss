@@ -368,7 +368,7 @@ footer {
 .slick-arrow {
   position: absolute;
   top: 35%; /* Centrer verticalement */
-  color: white;
+  color: $color-2;
   font-size: 119px;
   cursor: pointer;
   z-index: 10; /* Assurer que les flèches sont devant les images */
@@ -399,10 +399,10 @@ footer {
 .slick-prev:before,
 .slick-next:before {
   content: none; /* Empêche le contenu des pseudo-éléments de s'afficher */
-  margin: 0;
-  padding: 0;
-  height: 0;
-  width: 0;
+  // margin: 0;
+  // padding: 0;
+  // height: 0;
+  // width: 0;
 }
 
 // overflow: hidden;

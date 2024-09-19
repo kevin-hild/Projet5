@@ -65,16 +65,19 @@ const LocationDetail = () => {
         </div>
     );
 
+    // Désactiver le carrousel et les flèches si une seule image
+    const isSingleImage = location.pictures.length === 1;
+
     // Configuration du carrousel
     const settings = {
-        infinite: true,
+        infinite: !isSingleImage, // Désactiver l'infinité si une seule image
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 3000,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
+        nextArrow: isSingleImage ? null : <NextArrow />, // Désactiver la flèche "Suivant" si une seule image
+        prevArrow: isSingleImage ? null : <PrevArrow />, // Désactiver la flèche "Précédent" si une seule image
         fade: false,
     };
 
@@ -82,13 +85,17 @@ const LocationDetail = () => {
         <div className='contenu-page'>
             {/* Carrousel d'images */}
             <div className='img-carousel'>
-                <Slider {...settings}>
-                    {location.pictures.map((picture, index) => (
-                        <div key={index}>
-                            <img src={picture} alt={`${location.title} ${index}`} className="carousel-image" />
-                        </div>
-                    ))}
-                </Slider>
+                {isSingleImage ? (
+                    <img src={location.pictures[0]} alt={`${location.title}`} className="carousel-image" />
+                ) : (
+                    <Slider {...settings}>
+                        {location.pictures.map((picture, index) => (
+                            <div key={index}>
+                                <img src={picture} alt={`${location.title} ${index}`} className="carousel-image" />
+                            </div>
+                        ))}
+                    </Slider>
+                )}
             </div>
 
             <div className='info'>
