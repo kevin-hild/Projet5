@@ -11,6 +11,7 @@ const LocationDetail = () => {
     const { id } = useParams(); // Récupère l'ID depuis l'URL
     const [location, setLocation] = useState(null);
     const [loading, setLoading] = useState(true); // Nouveau state pour gérer le chargement
+    const [currentSlide, setCurrentSlide] = useState(0); // Nouvel état pour le compteur d'images
 
     useEffect(() => {
         fetch('/logements.json') // Charge les données depuis le fichier JSON
@@ -79,6 +80,7 @@ const LocationDetail = () => {
         nextArrow: isSingleImage ? null : <NextArrow />, // Désactiver la flèche "Suivant" si une seule image
         prevArrow: isSingleImage ? null : <PrevArrow />, // Désactiver la flèche "Précédent" si une seule image
         fade: false,
+        afterChange: (index) => setCurrentSlide(index), // Mettre à jour l'image active après chaque changement
     };
 
     return (
@@ -90,17 +92,20 @@ const LocationDetail = () => {
                 ) : (
                     <Slider {...settings}>
                         {location.pictures.map((picture, index) => (
-                            <div key={index}>
+                            <div key={index} className="carousel-slide">
                                 <img src={picture} alt={`${location.title} ${index}`} className="carousel-image" />
+                                {/* Compteur d'image */}
+                                <div className="image-counter">
+                                    {currentSlide + 1}/{location.pictures.length}
+                                </div>
                             </div>
                         ))}
                     </Slider>
                 )}
             </div>
-
             <div className='info'>
                 <div className='title-info'>
-                    <h1 className='title2'>{location.title}</h1>  
+                    <h2 className='title2'>{location.title}</h2>  
                     <p>{location.location}</p>
                     <div className="tags-container">
                         {location.tags.map((tag, index) => (
@@ -148,4 +153,3 @@ const LocationDetail = () => {
 };
 
 export default LocationDetail;
-//  titre a changez en h2 

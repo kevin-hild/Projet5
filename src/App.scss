@@ -350,7 +350,6 @@ footer {
     text-decoration-line: underline;
   }
 }
-
 /* Styles pour le carrousel */
 .img-carousel {
   position: relative;
@@ -366,6 +365,19 @@ footer {
     margin-bottom: 30px;
     border-radius: 15px;
   }
+}
+.carousel-slide {
+  position: relative;
+}
+.image-counter {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $color-2;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 /* Styles pour les flèches */
 .slick-arrow {
