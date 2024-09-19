@@ -72,6 +72,7 @@
     }
     .collapse-aPropos {
         gap: 20px;
+        margin-bottom: 20px;
     }
     .page-erreur {
         h1 {
@@ -148,6 +149,9 @@
       .rating-stars {
         margin-right: auto;
       }
+      .rating-stars .star {
+        font-size: 18px;
+      }
       .host-info .name-photo {
         justify-content: end;
         margin: 0;
@@ -162,6 +166,9 @@
       .img-carousel img {
         margin-bottom: 5px;
       }
+    }
+    .contenu-page .info {
+      margin-bottom: 12px;
     }
     .description-equipement {
       flex-direction: column;
