@@ -54,14 +54,14 @@ header {
   }
 }
 // Title
-h1 {
+h2 {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 48px;
   color: $color-2;
 }
-.titre_h1 .new-line {
+.titre_h2 .new-line {
   display: inline;
 }
 // Bannier

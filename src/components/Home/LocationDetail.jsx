@@ -100,7 +100,7 @@ const LocationDetail = () => {
 
             <div className='info'>
                 <div className='title-info'>
-                    <h1 className='title2'>{location.title}</h1>
+                    <h1 className='title2'>{location.title}</h1>  
                     <p>{location.location}</p>
                     <div className="tags-container">
                         {location.tags.map((tag, index) => (
@@ -148,3 +148,4 @@ const LocationDetail = () => {
 };
 
 export default LocationDetail;
+//  titre a changez en h2 

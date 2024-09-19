@@ -8,7 +8,7 @@ const A_Propos = () => {
             <div className='bannier bannier2'>
                 <Bannier
                     img="./assets/IMG2.jpg"
-                    title=""
+                    title=" "
                 />
             </div>
             <div className='collapse-aPropos'>

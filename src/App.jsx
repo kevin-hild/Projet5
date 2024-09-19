@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <main>
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/A-Propos" element={<A_Propos />} />
@@ -17,6 +18,7 @@ function App() {
         <Route path="/404" element={<Erreur404 />} /> {/* Route pour la page 404 */}
         <Route path="*" element={<Erreur404 />} /> {/* Route de correspondance pour les erreurs 404 */}
       </Routes>
+      </main>
       <Footer />
     </div>
   );

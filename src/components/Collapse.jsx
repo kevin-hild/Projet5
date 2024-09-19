@@ -27,3 +27,5 @@ const Collapse = ({title, p}) => {
 };
 
 export default Collapse;
+//  Collapse  changer en h2
+// animation Collapse et conteur
