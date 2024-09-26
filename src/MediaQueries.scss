@@ -43,9 +43,9 @@
         height: 255px;
         flex-shrink: 0;
       }
-      .title_card {
-        font-size: 16px; // Réduire la taille de la police du titre
-      }
+      // .title_card {
+      //   font-size: 16px; 
+      // }
     }
     h1 {
       font-size: 36px; // Réduire la taille du titre
@@ -96,22 +96,11 @@
     }
     .contenu-page {
         margin: 27px 20px;
-        .img-carousel img {
+        .img-carousel .carousel-image {
             height: 255px;
         }
-        .slick-arrow {
-            font-size: 24px; /* Ajuster la taille des flèches pour les écrans petits */
-            top: 45%;
-            z-index: 100;
-            margin: 0;
-          }
-        
-          .slick-prev {
-            left: 10px; /* Ajuster la position du côté gauche pour les petits écrans */
-          }
-        
-          .slick-next {
-            right: 5px; /* Ajuster la position du côté droit pour les petits écrans */
+          .arrow {
+            height: 24px;
           }
     }
     .info {
@@ -130,7 +119,6 @@
         margin-bottom: 16px;
       }
       .tags-container .tag {
-        // width: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -168,6 +156,12 @@
       }
       .img-carousel img {
         margin-bottom: 5px;
+      }
+      .user-star {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
       }
     }
     .contenu-page .info {
