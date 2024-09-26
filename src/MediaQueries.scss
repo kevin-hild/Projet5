@@ -57,10 +57,18 @@
       flex-direction: column; // Réorganiser les éléments du footer en colonne
       height: auto; // Ajuster la hauteur du footer
       .logo_copyright {
-        margin: 20px 0; // Ajuster les marges
+        margin: 66px 120px; // Ajuster les marges
       }
       .copyright {
+        display: flex;
+        align-items: end;
+        text-align: center; 
         font-size: 12px; // Réduire la taille de la police du texte copyright
+        width: 123px;
+        height: 46px;
+        
+        
+
       }
     }
     // Pour les images carrousel ou autre contenu
@@ -71,7 +79,7 @@
       bottom: 20px;
     }
     footer .logo_footer {
-        margin-bottom: 15px;
+        margin-bottom: 0px;
     }
     .collapse-aPropos {
         gap: 20px;
