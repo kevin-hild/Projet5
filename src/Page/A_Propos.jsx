@@ -1,6 +1,6 @@
 import React from 'react';
-import Bannier from '../Home/Bannier';
-import Collapse from '../Collapse';
+import Bannier from '../components/Bannier';
+import Collapse from '../components/Collapse';
 
 const A_Propos = () => {
     return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Bannier from './Bannier';
-import Card from '../Card';
+import Bannier from '../components/Bannier';
+import Card from '../components/Card';
 import { useNavigate } from 'react-router-dom'; // Pour la navigation
 
 const Accueil = () => {

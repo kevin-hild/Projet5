@@ -43,9 +43,6 @@
         height: 255px;
         flex-shrink: 0;
       }
-      // .title_card {
-      //   font-size: 16px; 
-      // }
     }
     h1 {
       font-size: 36px; // Réduire la taille du titre
@@ -66,16 +63,13 @@
         font-size: 12px; // Réduire la taille de la police du texte copyright
         width: 123px;
         height: 46px;
-        
-        
-
       }
     }
     // Pour les images carrousel ou autre contenu
     .img-carousel img {
       height: 250px; // Ajuster la hauteur des images carrousel
     }
-    .image-counter {
+    .img-carousel .image-counter {
       bottom: 20px;
     }
     footer .logo_footer {
@@ -148,8 +142,9 @@
       .rating-stars {
         margin-right: auto;
       }
-      .rating-stars .star {
-        font-size: 18px;
+      .star-icon {
+        width: 18px;
+        height: 18px;
       }
       .host-info .name-photo {
         justify-content: end;

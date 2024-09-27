@@ -237,9 +237,7 @@ footer {
   }
   .img-carousel img {
     width: 100%;
-    // height: auto;
     object-fit: cover;
-    // margin-bottom: 30px;
     border-radius: 15px;
   }
   .arrow {
@@ -278,7 +276,7 @@ footer {
       justify-content: center;
       align-items: center;
       gap: 10px;
-      // margin-bottom: 20px;
+      margin-bottom: 20px;
     }
     p {
       font-size: 18px;
@@ -298,17 +296,10 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  .star {
-    font-size: 40px;
-    margin-right: 4px;
-
-    &.full {
-      color: $color-3;
-    }
-
-    &.empty {
-      color: $color-empty-star;
-    }
+  .star-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
   }
 }
 // Description Equipement
@@ -378,37 +369,33 @@ footer {
     margin-bottom: 30px;
     border-radius: 15px;
   }
-}
+  .carousel-slide {
+    position: relative;
+  }
+  .image-counter {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  /* Styles pour les flèches */
+  .slick-arrow {
+    position: absolute;
+    top: 50%; /* Centrer verticalement */
+    transform: translateY(-50%); /* Ajustement pour centrer parfaitement */
+    cursor: pointer;
+    z-index: 10; /* Assurer que les flèches sont devant les images */
+  }
 
-.carousel-slide {
-  position: relative;
-}
+  .slick-arrow-left {
+    left: 20px; /* Positionner à 20px du bord gauche */
+  }
 
-.image-counter {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: $color-2;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 16px;
+  .slick-arrow-right {
+    right: 20px; /* Positionner à 20px du bord droit */
+  }
 }
-
-/* Styles pour les flèches */
-.slick-arrow {
-  position: absolute;
-  top: 50%; /* Centrer verticalement */
-  transform: translateY(-50%); /* Ajustement pour centrer parfaitement */
-  cursor: pointer;
-  z-index: 10; /* Assurer que les flèches sont devant les images */
-}
-
-.slick-arrow-left {
-  left: 20px; /* Positionner à 20px du bord gauche */
-}
-
-.slick-arrow-right {
-  right: 20px; /* Positionner à 20px du bord droit */
-}
-

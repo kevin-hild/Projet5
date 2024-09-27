@@ -1,11 +1,11 @@
 // pages/LocationDetail.js
 import React, { useEffect, useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import Collapse from '../Collapse';
-import Carousel from '../Carrousel';  // Import du composant Carousel
-import Tags from '../Tags';          // Import du composant Tags
-import User from '../User';          // Import du composant User
-import Rating from '../Rating';      // Import du composant Rating
+import Collapse from '../components/Collapse';
+import Carousel from '../components/Carrousel';  // Import du composant Carousel
+import Tags from '../components/Tags';          // Import du composant Tags
+import User from '../components/User';          // Import du composant User
+import Rating from '../components/Rating';      // Import du composant Rating
 
 const LocationDetail = () => {
     const { id } = useParams();
@@ -54,7 +54,7 @@ const LocationDetail = () => {
 
             <div className='description-equipement'>
                 <div className='collapse-description'>
-                    <Collapse title="Description" p={location.description} />
+                    <Collapse title="Description" p={location.description} /> {/* Utilisation du composant Collapse */}
                 </div>
                 <div className='collapse-equipements'>
                     <Collapse

@@ -1,8 +1,8 @@
 import React from 'react';
-import imgK from './Logo/K.png'
-import imgL from './Logo/logo.png'
-import imgS from './Logo/S.png'
-import imgA from './Logo/A.png'
+import imgK from '../assets/Logo/K.png'
+import imgL from '../assets/Logo/logo.png'
+import imgS from '../assets/Logo/S.png'
+import imgA from '../assets/Logo/A.png'
 
 
 const Footer = () => {

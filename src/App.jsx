@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import Accueil from './components/Home/Accueil';
-import A_Propos from './components/Apropos/A_Propos';
-import Header from './components/Home/Header';
-import Footer from './components/Home/Footer';
-import LocationDetail from './components/Home/LocationDetail'; // Importer le composant des détails de la location
-import Erreur404 from './components/Erreur404';
+import Accueil from './Page/Accueil';
+import A_Propos from './Page/A_Propos';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import LocationDetail from './Page/LocationDetail'; // Importer le composant des détails de la location
+import Erreur404 from './Page/Erreur404';
 
 function App() {
   return (
